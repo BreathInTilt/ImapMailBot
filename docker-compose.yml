@@ -1,0 +1,9 @@
+services:
+  mail2tg:
+    build: .
+    container_name: mail2tg
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
